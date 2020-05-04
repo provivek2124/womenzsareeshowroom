@@ -1,9 +1,10 @@
 import React from 'react';
 import './custom-button.styles.scss';
-import CollectionItem from '../colleciton-item/collection-item.component';
 
-const CustomButtom = ({children,...otherProps}) => (
-    <button className='custom-button' {...otherProps}>
+
+const CustomButtom = ({children,isGoogleSignIn,...otherProps}) => (
+    <button className={`${isGoogleSignIn?'google-sign-in':''} custom-button`} 
+    {...otherProps}>
         {children}
 
     </button>
